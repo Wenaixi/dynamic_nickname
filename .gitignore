@@ -216,3 +216,34 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+# --- appended by local-repo maintenance 2026-08-14 ---
+*.py[cod]
+.benchmarks/
+.claude/
+*.bak
+*.bak.*
+*.backup
+*.backup.*
+logs/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+config.toml
+config.toml.local
+config.toml.bak.*
+config.py.bak.*
+data/diaries/
+data/cookies-*.json
+data/cookie_stats.json
+data/diary_state.json
+data/diary_index.json
+data/processed_list.json
+data/processed_comments.json
+data/processed_feeds.json
+data/images/
+images/
+config_back/
+daily_schedule.json
