@@ -8,6 +8,7 @@ from __future__ import annotations
 import asyncio
 import datetime
 import json
+import logging
 import os
 import random
 import re
@@ -260,12 +261,15 @@ def _load_data() -> dict:
         return {"schedules": [], "last_update_ts": 0}
 
 
+logger = logging.getLogger(__name__)
+
+
 def _save_data(data: dict) -> None:
     try:
         with open(DATA_FILE, "w", encoding="utf-8") as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
-    except Exception:
-        pass
+    except Exception as exc:
+        logger.debug("dynamic-nickname: 保存群名片调度数据失败: %s", exc)
 
 
 def _update_schedule_history(new_item: dict) -> None:
