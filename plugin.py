@@ -359,7 +359,8 @@ class DynamicNicknamePlugin(MaiBotPlugin):
                 "max_tokens": max_tokens,
             }
             if model_name:
-                kwargs["model"] = model_name
+                # MaiBot 1.2.5 起 model 会被宿主当作具体模型名解析，任务名必须走 task_name
+                kwargs["task_name"] = model_name
             result = await self.ctx.llm.generate(**kwargs)
         except Exception as e:
             self.ctx.logger.error(f"LLM 调用异常: {e}", exc_info=True)
