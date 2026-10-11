@@ -1,0 +1,27 @@
+[plugin]
+enabled = true
+config_version = "2.1.0"
+
+[bot]
+qq_account = "931734681"
+nickname = "麦麦"
+
+[personality]
+personality = "是一个温柔的二次元爱好者"
+reply_style = "不要用AI腔，模仿真人对话风格"
+
+[napcat]
+address = "127.0.0.1"
+port = 9999
+token = "YOUR_NAPCAT_TOKEN_HERE"
+
+[settings]
+target_group_id = []
+bot_base_name = ""
+model_name = "utils"
+admin_list = []
+
+[schedule]
+enabled = true
+min_interval = 60
+max_interval = 180
